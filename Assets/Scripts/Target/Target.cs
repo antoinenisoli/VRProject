@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
+using HurricaneVR.Framework.Components;
 
-public class Target : MonoBehaviour
+public class Target : HVRDamageHandler
 {
     public GameObject Pivot;
     public int Points;
@@ -64,4 +65,11 @@ public class Target : MonoBehaviour
             Pivot.transform.DORotate(new Vector3(0, 90, 0), KillRotateDuration, RotateMode.WorldAxisAdd);
         });
     }
+
+    public override void HandleDamageProvider(HVRDamageProvider damageProvider, Vector3 hitPoint, Vector3 direction)
+    {
+        Hit = true;
+    }
 }
+
+

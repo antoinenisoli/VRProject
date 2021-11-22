@@ -73,6 +73,7 @@ namespace HurricaneVR.Framework.Weapons
         public GunHitEvent Hit = new GunHitEvent();
 
         private float _timer;
+        private LayerMask TargetMask = 11;
 
         public bool IsBulletChambered { get; set; }
 
