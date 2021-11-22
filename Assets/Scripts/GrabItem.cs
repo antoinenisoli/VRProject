@@ -1,15 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class GrabItem : MonoBehaviour
 {
-    [SerializeField] XRRayInteractor rayInteractor;
-    
+    XRRig mainController;
+    XRRayInteractor rayInteractor;
+    XRController controller;
+
+    private void Awake()
+    {
+        mainController = FindObjectOfType<XRRig>();
+        controller = GetComponent<XRController>();
+        rayInteractor = GetComponent<XRRayInteractor>();
+    }
+
     void Update()
     {
-        rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit);
-        print(hit);
+        if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+        {
+            Gun gun = hit.transform.GetComponentInParent<Gun>();
+            if (gun)
+                print(gun);
+            else
+            {
+                bool triggerValue;
+                if (controller.inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
+                {
+                    Debug.Log("Trigger button is pressed." + " // " + hit.transform);
+                    mainController.transform.position = new Vector3(hit.point.x, mainController.transform.position.y, hit.point.z);
+                }
+            }
+        }
     }
 }
