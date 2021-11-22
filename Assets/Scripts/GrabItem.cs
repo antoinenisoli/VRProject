@@ -8,12 +8,11 @@ public class GrabItem : MonoBehaviour
 {
     XRRig mainController;
     XRRayInteractor rayInteractor;
-    XRController controller;
+    [SerializeField] InputDevice device;
 
     private void Awake()
     {
         mainController = FindObjectOfType<XRRig>();
-        controller = GetComponent<XRController>();
         rayInteractor = GetComponent<XRRayInteractor>();
     }
 
@@ -21,7 +20,7 @@ public class GrabItem : MonoBehaviour
     {
         if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
-            Gun gun = hit.transform.GetComponentInParent<Gun>();
+            /*Gun gun = hit.transform.GetComponentInParent<Gun>();
             if (gun)
                 print(gun);
             else
@@ -32,7 +31,7 @@ public class GrabItem : MonoBehaviour
                     Debug.Log("Trigger button is pressed." + " // " + hit.transform);
                     mainController.transform.position = new Vector3(hit.point.x, mainController.transform.position.y, hit.point.z);
                 }
-            }
+            }*/
         }
     }
 }
