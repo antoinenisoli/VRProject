@@ -719,6 +719,109 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "keyboard",
+            "id": "0247980e-c278-4585-a00a-9e678779a211",
+            "actions": [
+                {
+                    "name": "Scale",
+                    "type": "Button",
+                    "id": "754fb871-9ddb-402a-bdfc-8683952bb8ce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Mouse",
+                    "type": "PassThrough",
+                    "id": "f9b34bdf-4f4a-4fb6-9977-f718cb3e034c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "M1",
+                    "type": "Button",
+                    "id": "f8d7c1e5-9c7c-4473-851a-90cc9cc8de04",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "M2",
+                    "type": "Button",
+                    "id": "38c382bf-e2f6-49e5-9c69-ba1ebada9857",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "M3",
+                    "type": "Button",
+                    "id": "d873b262-d7a1-4ac9-8752-fceef9d973d9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62e71f37-e2b6-41fa-ab79-4f55d6c5bb30",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Scale",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42c314ea-bb23-4405-ba37-3ecca01369b3",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a39a5445-9979-4214-99aa-187d9abc0c1d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "M1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9563744f-15fb-40e9-a3b7-a6f2e42c4b2a",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "M2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f201134b-a31f-4b86-a25c-9ee7ed16ea15",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "M3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
