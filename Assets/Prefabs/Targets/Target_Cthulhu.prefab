@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5198219414781988263}
   - component: {fileID: 9190741355491590658}
   - component: {fileID: 6370594391450547912}
+  - component: {fileID: 6687214008984109545}
   m_Layer: 0
   m_Name: Target_Cthulhu
   m_TagString: Untagged
@@ -81,3 +82,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6687214008984109545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857160410285922077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f1f1d10ec309047a78732c06c23afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pivot: {fileID: 0}
+  Points: 0
+  Hit: 0
+  ReadyRotateDuration: 0.5
+  KillRotateDuration: 0.25
+  KillShakeDuration: 0.1
+  KillShakeStrengthY: 15
+  KillShakeVibrato: 20
+  hit:
+    m_PersistentCalls:
+      m_Calls: []
+  ready:
+    m_PersistentCalls:
+      m_Calls: []
