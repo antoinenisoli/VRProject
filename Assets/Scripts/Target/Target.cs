@@ -6,7 +6,15 @@ using DG.Tweening;
 
 public class Target : MonoBehaviour
 {
-    public GameObject Pivot;
+    public enum AttachedTo
+    {
+        Ground,
+        Ceiling,
+        Left,
+        Right
+    }
+
+    public AttachedTo Pivot;
     public int Points;
     public bool Hit = false;
 
@@ -18,11 +26,13 @@ public class Target : MonoBehaviour
     [Header("Kill Animation Settings")]
     public float KillRotateDuration = 0.25f;
     public float KillShakeDuration = 0.1f;
-    public float KillShakeStrengthY = 15;
+    public float KillShakeStrength = 15;
     public int KillShakeVibrato = 20;
 
     [HideInInspector] public UnityEvent hit;
     [HideInInspector] public UnityEvent ready;
+
+    private Vector3 axis;
 
 
     private void Start()
@@ -36,7 +46,9 @@ public class Target : MonoBehaviour
             ready = new UnityEvent();
 
         hit.AddListener(Kill);
-        ready.AddListener(Ready);  
+        ready.AddListener(Ready);
+
+        SetPivotAxis();
     }
 
     private void Update()
@@ -47,9 +59,28 @@ public class Target : MonoBehaviour
         }
     }
 
+    private void SetPivotAxis()
+    {
+        switch (Pivot)
+        {
+            case AttachedTo.Ground:
+                axis = new Vector3(1, 0, 0);
+                break;
+            case AttachedTo.Ceiling:
+                axis = new Vector3(1, 0, 0);
+                break;
+            case AttachedTo.Right:
+                axis = new Vector3(0, 0, 1);
+                break;
+            case AttachedTo.Left:
+                axis = new Vector3(0, 0, -1);
+                break;
+        }
+    }
+
     public void Ready()
     {
-        Pivot.transform.DORotate(new Vector3(0, -90, 0), ReadyRotateDuration, RotateMode.WorldAxisAdd);
+        transform.DOLocalRotate(-axis * 90, ReadyRotateDuration, RotateMode.LocalAxisAdd);
         ready.RemoveListener(Ready);
     }
 
@@ -59,9 +90,9 @@ public class Target : MonoBehaviour
 
         TargetManager.Instance.CheckAllTargets();
 
-        Pivot.transform.DOShakeRotation(KillShakeDuration, new Vector3(0, KillShakeStrengthY, 0), KillShakeVibrato, 90, false).OnComplete(() =>
+        transform.DOShakeRotation(KillShakeDuration, axis * KillShakeStrength, KillShakeVibrato, 90, false).OnComplete(() =>
         {
-            Pivot.transform.DORotate(new Vector3(0, 90, 0), KillRotateDuration, RotateMode.WorldAxisAdd);
+            transform.DOLocalRotate(axis * 90, KillRotateDuration, RotateMode.LocalAxisAdd);
         });
     }
 }
