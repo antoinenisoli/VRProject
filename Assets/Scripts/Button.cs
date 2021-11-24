@@ -14,7 +14,7 @@ public class Button : MonoBehaviour
     public float PressDepth = 15;
     public float PressDuration = 1;
 
-    public UnityEvent pressed;
+    [HideInInspector] public UnityEvent pressed;
 
     public delegate void PressDelegate();
     public PressDelegate pressMethod;
@@ -30,7 +30,7 @@ public class Button : MonoBehaviour
 
     private void Update()
     {
-        if (IsPressed)
+        if (Input.GetKeyDown("space") || IsPressed)
         {
             pressed.Invoke();
         }

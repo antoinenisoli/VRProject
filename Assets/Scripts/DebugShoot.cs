@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class DebugShoot : MonoBehaviour
 {
-    public LayerMask Targets;
+    public LayerMask TargetLayer;
 
     private void Update()
     {
@@ -17,10 +17,9 @@ public class DebugShoot : MonoBehaviour
 
     public void Fire()
     {
-        Debug.Log("shoot");
         Ray rayShoot = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(rayShoot, out hit, Mathf.Infinity, Targets, QueryTriggerInteraction.Collide))
+        if (Physics.Raycast(rayShoot, out hit, Mathf.Infinity, TargetLayer, QueryTriggerInteraction.Collide))
         {           
             hit.collider.gameObject.GetComponent<Target>().Hit = true;
         }
