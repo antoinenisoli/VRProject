@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1879697574635621428}
   - component: {fileID: 4463895943711897854}
   - component: {fileID: 7455974753854636037}
-  m_Layer: 0
+  - component: {fileID: -7514719689577738169}
+  m_Layer: 7
   m_Name: Target_RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,13 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f1f1d10ec309047a78732c06c23afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pivot: {fileID: 0}
+  Pivot: 0
   Points: 0
   Hit: 0
   ReadyRotateDuration: 0.5
   KillRotateDuration: 0.25
   KillShakeDuration: 0.1
-  KillShakeStrengthY: 15
+  KillShakeStrength: 15
   KillShakeVibrato: 20
   hit:
     m_PersistentCalls:
@@ -108,3 +109,17 @@ MonoBehaviour:
   ready:
     m_PersistentCalls:
       m_Calls: []
+--- !u!64 &-7514719689577738169
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2806320661623904555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4212814951142172099, guid: 57ddda53d54a4654fa106b7cb4a31501, type: 3}

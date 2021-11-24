@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8044927167797842119}
   - component: {fileID: 5206625074201371661}
   - component: {fileID: 7636230665491128083}
-  m_Layer: 0
+  - component: {fileID: -6727565364896470442}
+  m_Layer: 7
   m_Name: Target_LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,3 +109,17 @@ MonoBehaviour:
   ready:
     m_PersistentCalls:
       m_Calls: []
+--- !u!64 &-6727565364896470442
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999174702982333912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6975704973706293676, guid: 5a0cb0ab668a1e844a6638f64040440e, type: 3}

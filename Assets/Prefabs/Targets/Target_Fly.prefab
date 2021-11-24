@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5873269861954590190}
   - component: {fileID: 8531784289532993828}
   - component: {fileID: 3938654269729589913}
-  m_Layer: 0
+  - component: {fileID: -6601475942089206424}
+  m_Layer: 7
   m_Name: Target_Fly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,3 +109,17 @@ MonoBehaviour:
   ready:
     m_PersistentCalls:
       m_Calls: []
+--- !u!64 &-6601475942089206424
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882989209549586673}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 137063578565164174, guid: e697b01a50f12e74785bb6946c32d75f, type: 3}

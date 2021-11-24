@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3934862820757580943}
   - component: {fileID: 1260875588478261317}
   - component: {fileID: 323371127162636989}
-  m_Layer: 0
+  - component: {fileID: 4922418284787562040}
+  m_Layer: 7
   m_Name: Target_Human
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,3 +109,17 @@ MonoBehaviour:
   ready:
     m_PersistentCalls:
       m_Calls: []
+--- !u!64 &4922418284787562040
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756459442473204112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4604937050508577761, guid: d9aa0606d31546a43a6f42b905300444, type: 3}

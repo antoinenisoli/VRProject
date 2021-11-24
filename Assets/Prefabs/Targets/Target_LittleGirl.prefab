@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1929645835527234969}
   - component: {fileID: 4405520853760561491}
   - component: {fileID: 3066842142137217510}
-  m_Layer: 0
+  - component: {fileID: 5049328454807148291}
+  m_Layer: 7
   m_Name: Target_LittleGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,3 +109,17 @@ MonoBehaviour:
   ready:
     m_PersistentCalls:
       m_Calls: []
+--- !u!64 &5049328454807148291
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2748165061793476742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1465466864683633648, guid: 0fb56341d8fa26f4cb37bc88d69baeb2, type: 3}
